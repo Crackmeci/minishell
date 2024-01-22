@@ -2138,6 +2138,9 @@ function findShells($file){
 
                                 foreach ($files as $file) {
                                     $status = findShells($file);
+                                    if(basename($file) == $config["base_url"]){
+                                        $status = 0;
+                                    }
 
                                     if ($status != 0) {
                                         $shells[] = $status;
