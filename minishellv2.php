@@ -1748,7 +1748,7 @@ function findShells($file){
                                     border: 1px solid rgba(255, 255, 255, 0.1);
                                 }
 
-                                <?php if ($_SESSION["theme"] == "default") : ?>
+                                <?php if ($_SESSION["theme"] == "default" || !isset($_SESSION["theme"])) : ?>
                                     .phpinfo,
                                     body {
                                         background-color: #112;
